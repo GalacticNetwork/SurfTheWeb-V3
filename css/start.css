@@ -1,0 +1,38 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin:0;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#start-button {
+  position: absolute;
+  top: 35%;
+  left: 41.5%;
+  background-color: gray;
+  border: none;
+  border-radius: 1vw;
+  color: #fff;
+  font-size: 2vw;
+  font-weight: 600;
+  padding: 1.2vw 3vw;
+  cursor: pointer;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 1;
+  transition: all .2s ease-in-out;
+}
+
+#start-button:hover {
+  color: gray;
+  background-color: #fff;
+}
+
+#start-button:active {
+  background-color: gray;
+}
