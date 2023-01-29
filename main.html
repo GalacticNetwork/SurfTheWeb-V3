@@ -1,170 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SurfTheWeb - Main</title>
-  	<link rel="stylesheet" href="css/main.css">
-    	<link rel="stylesheet" href="js/main.js">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SurfTheWeb - Main</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="js/main.js">
 </head>
 <body>
-<script>
-	function hideiframe()
-		{
-			document.getElementById("unblxckframe").style.display = "none"
-			document.getElementById("settingsframe").style.display = "none"
-			document.getElementById("chtframe").style.display = "none"
-			document.getElementById("creditframe").style.display = "none"
-		}
-
-	function showunblxckiframe()
-	{
-		var x = document.getElementById("unblxckframe");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-	}
-		function showsettingsiframe()
-	{
-		var x = document.getElementById("settingsframe");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-	}
-				function showchtiframe()
-	{
-		var x = document.getElementById("chtframe");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-	}
-				function showcreditiframe()
-	{
-		var x = document.getElementById("creditframe");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-	}
-</script>
-	<ul class="top-navigation">
-  <li>
-    <a onclick="window.location.reload()">
-      <img class="settings" style="cursor: pointer;" src="img/home.png">
-      <h6>home</h6>
-    </a>
-  </li>
-				<li>
-    <a onclick="hideiframe();showunblxckiframe()">
-      <img class="settings" style="cursor: pointer;" src="img/unlockit.png">
-      <h6>un<span>blo</span>ck</h6>
-    </a>
-  </li>
-				<li>
-    <a onclick="hideiframe();showsettingsiframe()">
-      <img class="settings" style="cursor: pointer;" src="img/games.png">
-    </a>
-  </li>
-				<li>
-    <a onclick="hideiframe();showchtiframe()">
-      <img class="settings" style="cursor: pointer;" src="img/settings.png">
-    </a>
-  </li>
-				<li>
-    <a onclick="hideiframe();showcreditiframe()">
-      <img class="settings" style="cursor: pointer;" src="img/links.png">
-    </a>
-  </li>
-</ul>
-		<iframe
-  src="apps.html"
-  allowtransparency="true"
-  style="
-    position:fixed;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    width: 100%;
-    border: none;
-    margin: 0;
-    padding: 0;
-    overflow:scroll;
-    z-index: 100;
-    height: 93%;
-	display: none;
-	margin-top: 55px;
-  "
-  id="appframe">
-</iframe>
-			<iframe
-  src="gxmes.html"
-  allowtransparency="true"
-  style="
-    position:fixed;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    width: 100%;
-    border: none;
-    margin: 0;
-    padding: 0;
-    overflow:scroll;
-    z-index: 100;
-    height: 93%;
-	display: none;
-	margin-top: 55px;
-  "
-  id="gxmeframe">
-</iframe>
-			<iframe
-  src="settings.html"
-  allowtransparency="true"
-  style="
-    position:fixed;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    width: 100%;
-    border: none;
-    margin: 0;
-    padding: 0;
-    overflow:scroll;
-    z-index: 100;
-    height: 93%;
-	display: none;
-	margin-top: 55px;
-  "
-  id="settingsframe">
-</iframe>
-				<iframe
-  src="links.html"
-  allowtransparency="true"
-  style="
-    position:fixed;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    width: 100%;
-    border: none;
-    margin: 0;
-    padding: 0;
-    overflow:scroll;
-    z-index: 100;
-    height: 93%;
-	display: none;
-	margin-top: 55px;
-  "
-  id="linkframe">
-  <div align="center">
-    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#abb8c3"></stop><stop offset="95%" stop-color="#abb8c3"></stop></linearGradient></defs><path d="M 0,600 C 0,600 0,200 0,200 C 121.36842105263153,158.4306220095694 242.73684210526307,116.86124401913875 325,140 C 407.26315789473693,163.13875598086125 450.4210526315791,250.98564593301435 552,250 C 653.5789473684209,249.01435406698565 813.578947368421,159.19617224880383 913,142 C 1012.421052631579,124.80382775119617 1051.2631578947369,180.22966507177034 1129,202 C 1206.7368421052631,223.77033492822966 1323.3684210526317,211.88516746411483 1440,200 C 1440,200 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#abb8c3"></stop><stop offset="95%" stop-color="#abb8c3"></stop></linearGradient></defs><path d="M 0,600 C 0,600 0,400 0,400 C 107.24401913875596,373.5406698564593 214.48803827751192,347.08133971291863 303,362 C 391.5119617224881,376.91866028708137 461.2918660287081,433.21531100478467 567,454 C 672.7081339712919,474.78468899521533 814.3444976076556,460.05741626794264 914,439 C 1013.6555023923444,417.94258373205736 1071.3301435406697,390.555023923445 1152,383 C 1232.6698564593303,375.444976076555 1336.3349282296651,387.7224880382775 1440,400 C 1440,400 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1"></path></svg>
-          <h2>Galactic Network © All Rights Reserved</h2>
+	<div align="center">
+		<h1>SurfTheWeb.</h1>
+    <h2>Welcome By<span>pass</span>er!</h2>
+		<h2>Galactic Network © All Rights Reserved</h2>
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
+          .path-0{
+            animation:pathAnim-0 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+          @keyframes pathAnim-0{
+            0%{
+              d: path("M 0,600 C 0,600 0,200 0,200 C 117.49282296650719,215.1004784688995 234.98564593301438,230.20095693779902 325,222 C 415.0143540669856,213.79904306220098 477.5502392344497,182.29665071770336 580,175 C 682.4497607655503,167.70334928229664 824.8133971291867,184.61244019138758 909,196 C 993.1866028708133,207.38755980861242 1019.1961722488038,213.2535885167464 1098,213 C 1176.8038277511962,212.7464114832536 1308.401913875598,206.3732057416268 1440,200 C 1440,200 1440,600 1440,600 Z");
+            }
+            25%{
+              d: path("M 0,600 C 0,600 0,200 0,200 C 81.34928229665073,185.57894736842104 162.69856459330146,171.1578947368421 256,173 C 349.30143540669854,174.8421052631579 454.555023923445,192.94736842105263 560,200 C 665.444976076555,207.05263157894737 771.0813397129189,203.05263157894737 881,185 C 990.9186602870811,166.94736842105263 1105.1196172248801,134.8421052631579 1199,135 C 1292.8803827751199,135.1578947368421 1366.44019138756,167.57894736842104 1440,200 C 1440,200 1440,600 1440,600 Z");
+            }
+            50%{
+              d: path("M 0,600 C 0,600 0,200 0,200 C 77.55980861244021,174.08612440191388 155.11961722488041,148.17224880382778 265,154 C 374.8803827751196,159.82775119617222 517.0813397129187,197.39712918660285 603,231 C 688.9186602870813,264.60287081339715 718.5550239234451,294.2392344497608 813,266 C 907.4449760765549,237.76076555023923 1066.6985645933014,151.64593301435406 1182,131 C 1297.3014354066986,110.35406698564593 1368.6507177033493,155.17703349282297 1440,200 C 1440,200 1440,600 1440,600 Z");
+            }
+            75%{
+              d: path("M 0,600 C 0,600 0,200 0,200 C 119.29186602870817,234.82296650717706 238.58373205741634,269.6459330143541 337,250 C 435.41626794258366,230.35406698564591 512.956937799043,156.23923444976074 595,159 C 677.043062200957,161.76076555023926 763.5885167464118,241.39712918660285 860,253 C 956.4114832535882,264.60287081339715 1062.6889952153108,208.17224880382776 1161,188 C 1259.3110047846892,167.82775119617224 1349.6555023923447,183.91387559808612 1440,200 C 1440,200 1440,600 1440,600 Z");
+            }
+            100%{
+              d: path("M 0,600 C 0,600 0,200 0,200 C 117.49282296650719,215.1004784688995 234.98564593301438,230.20095693779902 325,222 C 415.0143540669856,213.79904306220098 477.5502392344497,182.29665071770336 580,175 C 682.4497607655503,167.70334928229664 824.8133971291867,184.61244019138758 909,196 C 993.1866028708133,207.38755980861242 1019.1961722488038,213.2535885167464 1098,213 C 1176.8038277511962,212.7464114832536 1308.401913875598,206.3732057416268 1440,200 C 1440,200 1440,600 1440,600 Z");
+            }
+          }</style><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#abb8c3"></stop><stop offset="95%" stop-color="#abb8c3"></stop></linearGradient></defs><path d="M 0,600 C 0,600 0,200 0,200 C 117.49282296650719,215.1004784688995 234.98564593301438,230.20095693779902 325,222 C 415.0143540669856,213.79904306220098 477.5502392344497,182.29665071770336 580,175 C 682.4497607655503,167.70334928229664 824.8133971291867,184.61244019138758 909,196 C 993.1866028708133,207.38755980861242 1019.1961722488038,213.2535885167464 1098,213 C 1176.8038277511962,212.7464114832536 1308.401913875598,206.3732057416268 1440,200 C 1440,200 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><style>
+          .path-1{
+            animation:pathAnim-1 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+          @keyframes pathAnim-1{
+            0%{
+              d: path("M 0,600 C 0,600 0,400 0,400 C 90.25837320574166,412.4019138755981 180.51674641148333,424.80382775119614 286,420 C 391.4832535885167,415.19617224880386 512.1913875598085,393.1866028708134 609,382 C 705.8086124401915,370.8133971291866 778.7177033492824,370.44976076555025 872,375 C 965.2822966507176,379.55023923444975 1078.9377990430623,389.0143540669856 1177,394 C 1275.0622009569377,398.9856459330144 1357.531100478469,399.4928229665072 1440,400 C 1440,400 1440,600 1440,600 Z");
+            }
+            25%{
+              d: path("M 0,600 C 0,600 0,400 0,400 C 110.30622009569379,404.87081339712915 220.61244019138758,409.74162679425837 316,422 C 411.3875598086124,434.25837320574163 491.8564593301436,453.90430622009575 582,461 C 672.1435406698564,468.09569377990425 771.9617224880384,462.64114832535876 872,461 C 972.0382775119616,459.35885167464124 1072.2966507177034,461.5311004784689 1167,452 C 1261.7033492822966,442.4688995215311 1350.8516746411483,421.23444976076553 1440,400 C 1440,400 1440,600 1440,600 Z");
+            }
+            50%{
+              d: path("M 0,600 C 0,600 0,400 0,400 C 81.63636363636365,367.11961722488036 163.2727272727273,334.2392344497608 265,351 C 366.7272727272727,367.7607655502392 488.5454545454545,434.1626794258373 592,440 C 695.4545454545455,445.8373205741627 780.5454545454547,391.1100478468899 859,364 C 937.4545454545453,336.8899521531101 1009.2727272727273,337.3971291866029 1105,348 C 1200.7272727272727,358.6028708133971 1320.3636363636365,379.30143540669854 1440,400 C 1440,400 1440,600 1440,600 Z");
+            }
+            75%{
+              d: path("M 0,600 C 0,600 0,400 0,400 C 85.56937799043064,404.25837320574163 171.13875598086128,408.51674641148327 252,421 C 332.8612440191387,433.48325358851673 409.0143540669857,454.19138755980856 522,439 C 634.9856459330143,423.80861244019144 784.8038277511961,372.7177033492823 884,354 C 983.1961722488039,335.2822966507177 1031.7703349282299,348.93779904306217 1116,362 C 1200.2296650717701,375.06220095693783 1320.114832535885,387.53110047846894 1440,400 C 1440,400 1440,600 1440,600 Z");
+            }
+            100%{
+              d: path("M 0,600 C 0,600 0,400 0,400 C 90.25837320574166,412.4019138755981 180.51674641148333,424.80382775119614 286,420 C 391.4832535885167,415.19617224880386 512.1913875598085,393.1866028708134 609,382 C 705.8086124401915,370.8133971291866 778.7177033492824,370.44976076555025 872,375 C 965.2822966507176,379.55023923444975 1078.9377990430623,389.0143540669856 1177,394 C 1275.0622009569377,398.9856459330144 1357.531100478469,399.4928229665072 1440,400 C 1440,400 1440,600 1440,600 Z");
+            }
+          }</style><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#abb8c3"></stop><stop offset="95%" stop-color="#abb8c3"></stop></linearGradient></defs><path d="M 0,600 C 0,600 0,400 0,400 C 90.25837320574166,412.4019138755981 180.51674641148333,424.80382775119614 286,420 C 391.4832535885167,415.19617224880386 512.1913875598085,393.1866028708134 609,382 C 705.8086124401915,370.8133971291866 778.7177033492824,370.44976076555025 872,375 C 965.2822966507176,379.55023923444975 1078.9377990430623,389.0143540669856 1177,394 C 1275.0622009569377,398.9856459330144 1357.531100478469,399.4928229665072 1440,400 C 1440,400 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1"></path></svg>
+	</div>
 </body>
+
 </html>
