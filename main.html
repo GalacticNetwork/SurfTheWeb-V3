@@ -6,58 +6,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SurfTheWeb - Main</title>
   	<link rel="stylesheet" href="css/main.css">
+    	<link rel="stylesheet" href="js/main.js">
 </head>
 <body>
-  <div align="center">
-    <h1>SurfTheWeb.</h1>
-    
+<script>
+	function hideiframe()
+		{
+			document.getElementById("unblxckframe").style.display = "none"
+			document.getElementById("settingsframe").style.display = "none"
+			document.getElementById("chtframe").style.display = "none"
+			document.getElementById("creditframe").style.display = "none"
+		}
 
-    <canvas id="canvas" height="100%" width="100%"></canvas>
-    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
-          .path-0{
-            animation:pathAnim-0 4s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-          }
-          @keyframes pathAnim-0{
-            0%{
-              d: path("M 0,600 C 0,600 0,200 0,200 C 89.92344497607655,174.77511961722487 179.8468899521531,149.55023923444975 276,142 C 372.1531100478469,134.44976076555025 474.53588516746413,144.57416267942585 570,178 C 665.4641148325359,211.42583732057415 754.0095693779905,268.1531100478469 864,270 C 973.9904306220095,271.8468899521531 1105.4258373205741,218.8133971291866 1205,198 C 1304.5741626794259,177.1866028708134 1372.287081339713,188.59330143540672 1440,200 C 1440,200 1440,600 1440,600 Z");
-            }
-            25%{
-              d: path("M 0,600 C 0,600 0,200 0,200 C 121.25358851674642,201.89473684210526 242.50717703349284,203.78947368421055 330,184 C 417.49282296650716,164.21052631578945 471.22488038277504,122.73684210526318 556,141 C 640.775119617225,159.26315789473682 756.5933014354068,237.26315789473682 865,268 C 973.4066985645932,298.7368421052632 1074.401913875598,282.2105263157895 1169,263 C 1263.598086124402,243.78947368421052 1351.799043062201,221.89473684210526 1440,200 C 1440,200 1440,600 1440,600 Z");
-            }
-            50%{
-              d: path("M 0,600 C 0,600 0,200 0,200 C 106.74641148325358,212.77511961722487 213.49282296650716,225.55023923444975 307,219 C 400.50717703349284,212.44976076555025 480.77511961722496,186.57416267942583 576,193 C 671.224880382775,199.42583732057417 781.4066985645933,238.1531100478469 870,248 C 958.5933014354067,257.8468899521531 1025.598086124402,238.8133971291866 1117,226 C 1208.401913875598,213.1866028708134 1324.200956937799,206.59330143540672 1440,200 C 1440,200 1440,600 1440,600 Z");
-            }
-            75%{
-              d: path("M 0,600 C 0,600 0,200 0,200 C 91.866028708134,196.9090909090909 183.732057416268,193.8181818181818 293,179 C 402.267942583732,164.1818181818182 528.9377990430622,137.63636363636363 624,128 C 719.0622009569378,118.36363636363636 782.5167464114832,125.63636363636363 868,152 C 953.4832535885168,178.36363636363637 1060.9952153110048,223.8181818181818 1160,235 C 1259.0047846889952,246.1818181818182 1349.5023923444976,223.0909090909091 1440,200 C 1440,200 1440,600 1440,600 Z");
-            }
-            100%{
-              d: path("M 0,600 C 0,600 0,200 0,200 C 89.92344497607655,174.77511961722487 179.8468899521531,149.55023923444975 276,142 C 372.1531100478469,134.44976076555025 474.53588516746413,144.57416267942585 570,178 C 665.4641148325359,211.42583732057415 754.0095693779905,268.1531100478469 864,270 C 973.9904306220095,271.8468899521531 1105.4258373205741,218.8133971291866 1205,198 C 1304.5741626794259,177.1866028708134 1372.287081339713,188.59330143540672 1440,200 C 1440,200 1440,600 1440,600 Z");
-            }
-          }</style><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#abb8c3"></stop><stop offset="95%" stop-color="#abb8c3"></stop></linearGradient></defs><path d="M 0,600 C 0,600 0,200 0,200 C 89.92344497607655,174.77511961722487 179.8468899521531,149.55023923444975 276,142 C 372.1531100478469,134.44976076555025 474.53588516746413,144.57416267942585 570,178 C 665.4641148325359,211.42583732057415 754.0095693779905,268.1531100478469 864,270 C 973.9904306220095,271.8468899521531 1105.4258373205741,218.8133971291866 1205,198 C 1304.5741626794259,177.1866028708134 1372.287081339713,188.59330143540672 1440,200 C 1440,200 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><style>
-          .path-1{
-            animation:pathAnim-1 4s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-          }
-          @keyframes pathAnim-1{
-            0%{
-              d: path("M 0,600 C 0,600 0,400 0,400 C 83.7224880382775,429.2153110047847 167.444976076555,458.43062200956945 264,455 C 360.555023923445,451.56937799043055 469.9425837320575,415.4928229665071 583,402 C 696.0574162679425,388.5071770334929 812.7846889952152,397.59808612440196 893,394 C 973.2153110047848,390.40191387559804 1016.9186602870814,374.11483253588517 1102,373 C 1187.0813397129186,371.88516746411483 1313.5406698564593,385.9425837320574 1440,400 C 1440,400 1440,600 1440,600 Z");
-            }
-            25%{
-              d: path("M 0,600 C 0,600 0,400 0,400 C 73.41626794258374,426.39234449760767 146.8325358851675,452.78468899521533 234,431 C 321.1674641148325,409.21531100478467 422.0861244019138,339.2535885167464 547,331 C 671.9138755980862,322.7464114832536 820.8229665071772,376.2009569377991 913,404 C 1005.1770334928228,431.7990430622009 1040.622009569378,433.94258373205736 1119,429 C 1197.377990430622,424.05741626794264 1318.688995215311,412.02870813397135 1440,400 C 1440,400 1440,600 1440,600 Z");
-            }
-            50%{
-              d: path("M 0,600 C 0,600 0,400 0,400 C 84.07655502392345,401.92344497607655 168.1531100478469,403.8468899521531 249,409 C 329.8468899521531,414.1531100478469 407.46411483253587,422.53588516746413 526,430 C 644.5358851674641,437.46411483253587 803.9904306220096,444.00956937799043 909,432 C 1014.0095693779904,419.99043062200957 1064.5741626794259,389.4258373205742 1144,381 C 1223.4258373205741,372.5741626794258 1331.712918660287,386.2870813397129 1440,400 C 1440,400 1440,600 1440,600 Z");
-            }
-            75%{
-              d: path("M 0,600 C 0,600 0,400 0,400 C 94.03827751196172,426.75598086124404 188.07655502392345,453.5119617224881 287,436 C 385.92344497607655,418.4880382775119 489.73205741626793,356.7081339712919 593,349 C 696.2679425837321,341.2918660287081 798.9952153110048,387.65550239234454 899,385 C 999.0047846889952,382.34449760765546 1096.2870813397128,330.66985645933016 1186,325 C 1275.7129186602872,319.33014354066984 1357.8564593301435,359.6650717703349 1440,400 C 1440,400 1440,600 1440,600 Z");
-            }
-            100%{
-              d: path("M 0,600 C 0,600 0,400 0,400 C 83.7224880382775,429.2153110047847 167.444976076555,458.43062200956945 264,455 C 360.555023923445,451.56937799043055 469.9425837320575,415.4928229665071 583,402 C 696.0574162679425,388.5071770334929 812.7846889952152,397.59808612440196 893,394 C 973.2153110047848,390.40191387559804 1016.9186602870814,374.11483253588517 1102,373 C 1187.0813397129186,371.88516746411483 1313.5406698564593,385.9425837320574 1440,400 C 1440,400 1440,600 1440,600 Z");
-            }
-          }</style><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#abb8c3"></stop><stop offset="95%" stop-color="#abb8c3"></stop></linearGradient></defs><path d="M 0,600 C 0,600 0,400 0,400 C 83.7224880382775,429.2153110047847 167.444976076555,458.43062200956945 264,455 C 360.555023923445,451.56937799043055 469.9425837320575,415.4928229665071 583,402 C 696.0574162679425,388.5071770334929 812.7846889952152,397.59808612440196 893,394 C 973.2153110047848,390.40191387559804 1016.9186602870814,374.11483253588517 1102,373 C 1187.0813397129186,371.88516746411483 1313.5406698564593,385.9425837320574 1440,400 C 1440,400 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1"></path></svg>
+	function showunblxckiframe()
+	{
+		var x = document.getElementById("unblxckframe");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+	}
+		function showsettingsiframe()
+	{
+		var x = document.getElementById("settingsframe");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+	}
+				function showchtiframe()
+	{
+		var x = document.getElementById("chtframe");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+	}
+				function showcreditiframe()
+	{
+		var x = document.getElementById("creditframe");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+	}
+</script>
+	<ul class="top-navigation">
+  <li>
+    <a onclick="window.location.reload()">
+      <img class="settings" style="cursor: pointer;" src="img/home.png">
+      <h6>home</h6>
+    </a>
+  </li>
+				<li>
+    <a onclick="hideiframe();showunblxckiframe()">
+      <img class="settings" style="cursor: pointer;" src="img/unlockit.png">
+      <h6>un<span>blo</span>ck</h6>
+    </a>
+  </li>
+				<li>
+    <a onclick="hideiframe();showsettingsiframe()">
+      <img class="settings" style="cursor: pointer;" src="img/games.png">
+    </a>
+  </li>
+				<li>
+    <a onclick="hideiframe();showchtiframe()">
+      <img class="settings" style="cursor: pointer;" src="img/settings.png">
+    </a>
+  </li>
+				<li>
+    <a onclick="hideiframe();showcreditiframe()">
+      <img class="settings" style="cursor: pointer;" src="img/links.png">
+    </a>
+  </li>
+</ul>
+		<iframe
+  src="apps.html"
+  allowtransparency="true"
+  style="
+    position:fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow:scroll;
+    z-index: 100;
+    height: 93%;
+	display: none;
+	margin-top: 55px;
+  "
+  id="appframe">
+</iframe>
+			<iframe
+  src="gxmes.html"
+  allowtransparency="true"
+  style="
+    position:fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow:scroll;
+    z-index: 100;
+    height: 93%;
+	display: none;
+	margin-top: 55px;
+  "
+  id="gxmeframe">
+</iframe>
+			<iframe
+  src="settings.html"
+  allowtransparency="true"
+  style="
+    position:fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow:scroll;
+    z-index: 100;
+    height: 93%;
+	display: none;
+	margin-top: 55px;
+  "
+  id="settingsframe">
+</iframe>
+				<iframe
+  src="links.html"
+  allowtransparency="true"
+  style="
+    position:fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow:scroll;
+    z-index: 100;
+    height: 93%;
+	display: none;
+	margin-top: 55px;
+  "
+  id="linkframe">
+  <div align="center">
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#abb8c3"></stop><stop offset="95%" stop-color="#abb8c3"></stop></linearGradient></defs><path d="M 0,600 C 0,600 0,200 0,200 C 121.36842105263153,158.4306220095694 242.73684210526307,116.86124401913875 325,140 C 407.26315789473693,163.13875598086125 450.4210526315791,250.98564593301435 552,250 C 653.5789473684209,249.01435406698565 813.578947368421,159.19617224880383 913,142 C 1012.421052631579,124.80382775119617 1051.2631578947369,180.22966507177034 1129,202 C 1206.7368421052631,223.77033492822966 1323.3684210526317,211.88516746411483 1440,200 C 1440,200 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#abb8c3"></stop><stop offset="95%" stop-color="#abb8c3"></stop></linearGradient></defs><path d="M 0,600 C 0,600 0,400 0,400 C 107.24401913875596,373.5406698564593 214.48803827751192,347.08133971291863 303,362 C 391.5119617224881,376.91866028708137 461.2918660287081,433.21531100478467 567,454 C 672.7081339712919,474.78468899521533 814.3444976076556,460.05741626794264 914,439 C 1013.6555023923444,417.94258373205736 1071.3301435406697,390.555023923445 1152,383 C 1232.6698564593303,375.444976076555 1336.3349282296651,387.7224880382775 1440,400 C 1440,400 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1"></path></svg>
           <h2>Galactic Network © All Rights Reserved</h2>
 </body>
 </html>
