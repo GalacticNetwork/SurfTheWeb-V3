@@ -3,6 +3,7 @@ body {
 	background-color: #46494C;
    color: white;
 	font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
 .top-navigation {
 	float: right;

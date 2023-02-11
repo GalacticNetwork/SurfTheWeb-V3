@@ -4,12 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Credits / Contributers</title>
-     <link rel="icon" href="/img/stw.png" />
+  <title>SurfTheWeb - Settings</title>
+    <link rel="icon" href="/img/stw.png" />
 	<link rel="shortcut icon" href="/img/stw.png" />
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="css/main.css">
+  	<link rel="stylesheet" href="css/navbar.css">
   <style>
+    .input {
+  border: none;
+  background: black;
+  width: 200px;
+  padding: 10px;
+  border-radius: 15px;
+  outline: none;
+  color: var(--text-secondary);
+}
     .imgbtn {
 	width: 75px;
 	height: 75px;
@@ -66,9 +75,13 @@
     <a href="creds.html">Credits</a>
        <a href="set.html">Settings</a>
 </div>
- <h1>Thanks to these people for contributing to, SurfTheWeb!</h1>
-  <h2>airplay#4408 - Design</h2>
-  <h2>3kh0#6969 - Settings code</h2>
+  <div align="center">
+    <h1>Settings</h1>
+  <div class="buttons">
+    <input id="title" class="input" placeholder="Title" onkeyup="setTitle(this.value)">
+    <input id="icon" class="input" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())">
+    <button class="btn" onclick="resetTab()">Reset</button>
+  </div>
 </body>
   <script src="/js/settings/set.js"></script>
     <script src="/js/settings/2set.js"></script>
