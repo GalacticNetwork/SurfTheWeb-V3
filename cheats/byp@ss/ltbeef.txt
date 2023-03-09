@@ -1,0 +1,2 @@
+javascript: chrome.management.getAll(a => {a = a.filter(e => e.installType === 'admin'); a.forEach(e => chrome.management.setEnabled(e.id,!1)); alert('disabled ' + a.length + ' extensions')})
+Run this on https://chrome.google.com/webstore
